@@ -50,3 +50,4 @@ Thumbs.db
 
 # do not include buils directory
 build/
+sh1106/headers_templates.h

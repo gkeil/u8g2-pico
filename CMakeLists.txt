@@ -23,29 +23,14 @@ project(u8g2-pico C CXX ASM)
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
-# Add executable. Default name is the project name, version 0.1
+# Add subdirectories
+add_subdirectory( csrc )
+add_subdirectory( test )
 
-add_executable(u8g2-pico u8g2-pico.c )
 
-pico_set_program_name(u8g2-pico "u8g2-pico")
-pico_set_program_version(u8g2-pico "0.1")
 
-pico_enable_stdio_uart(u8g2-pico 1)
-pico_enable_stdio_usb(u8g2-pico 0)
 
-# Add the standard library to the build
-target_link_libraries(u8g2-pico
-        pico_stdlib)
 
-# Add the standard include files to the build
-target_include_directories(u8g2-pico PRIVATE
-  ${CMAKE_CURRENT_LIST_DIR}
-  ${CMAKE_CURRENT_LIST_DIR}/.. # for our common lwipopts or any other standard includes, if required
-)
 
-# Add any user requested libraries
-target_link_libraries(u8g2-pico 
-        )
 
-pico_add_extra_outputs(u8g2-pico)
 
