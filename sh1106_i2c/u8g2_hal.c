@@ -174,6 +174,7 @@ uint8_t u8x8_byte_i2c_pi_pico(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void *
   static uint8_t buf_idx;
   uint8_t *data;
  
+
   switch(msg)
   {
     case U8X8_MSG_BYTE_SEND:
