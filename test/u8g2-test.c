@@ -2,9 +2,8 @@
 #include <string.h>
 
 #include "pico/stdlib.h"
-#include "u8g2.h"
-#include "u8g2_hal.h"
-
+#include "libu8g2/csrc/u8g2.h"
+#include "libu8g2/sh1106_i2c/u8g2_hal.h"
 
 
 void main()

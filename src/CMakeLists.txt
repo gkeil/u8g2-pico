@@ -8,18 +8,18 @@ if ( NOT TARGET u8g2 )
 
     add_library( u8g2 INTERFACE )
 
-    file(GLOB COMPONENT_SRCS ./*.c)
-    file(GLOB COMPONENT_HDRS ./*.h)
+    file(GLOB COMPONENT_SRCS libu8g2/csrc/*.c)
+    file(GLOB COMPONENT_HDRS libu8g2/csrc/*.h)
 
     #add_subdirectory( ../sh1106_i2c )
 
 
     target_sources( u8g2 INTERFACE ${COMPONENT_SRCS}
-                                    ../sh1106_i2c/u8g2_hal.c 
+                                    libu8g2/sh1106_i2c/u8g2_hal.c 
                                     )
 
     target_include_directories(u8g2 INTERFACE ./
-                                               ../sh1106_i2c)
+                                               )
                                                
     # Add the standard library to the build
     target_link_libraries(  u8g2     INTERFACE

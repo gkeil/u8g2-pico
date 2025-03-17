@@ -24,7 +24,7 @@ project(u8g2-pico C CXX ASM)
 pico_sdk_init()
 
 # Add subdirectories
-add_subdirectory( csrc )
+add_subdirectory( src )
 add_subdirectory( test )
 
 
