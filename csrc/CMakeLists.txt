@@ -18,8 +18,9 @@ if ( NOT TARGET u8g2 )
                                     ../sh1106_i2c/u8g2_hal.c 
                                     )
 
-    target_include_directories(u8g2 INTERFACE ./ )
-
+    target_include_directories(u8g2 INTERFACE ./
+                                               ../sh1106_i2c)
+                                               
     # Add the standard library to the build
     target_link_libraries(  u8g2     INTERFACE
                             pico_stdlib
